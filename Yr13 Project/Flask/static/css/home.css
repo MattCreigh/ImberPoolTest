@@ -1,0 +1,52 @@
+body{
+  background: #33B7E5;
+  margin:0;
+	padding: 0;
+}
+button{
+  border: 0;
+  border-radius: 2px;
+}
+.RC1{
+  max-height: 300px; max-width: 400px; min-width: 290px;
+  margin-left: auto; margin-right: auto;
+  padding: 2vw;
+  align-self: center;
+  height: 100%;
+}
+.LogInContainer{
+  background: #5CC5EA;
+  position: relative;
+  margin-left: auto; margin-right: auto;
+  width: 100%; padding-bottom: 140%; height: 0;
+  border-radius: 2px;
+}
+
+.Heading{
+  text-align: center;
+  padding-top: 15%;
+  font-family: 'Josefin Slab', serif; font-size: 300%; letter-spacing: -.25px; color: white; line-height: 110%; font-weight: bold;
+}
+
+.CreateAccountMethods{
+  list-style: none;
+  text-align: center;
+  padding-top: 10%; padding-left: 0;
+}
+
+.MethodButton{
+  width: 25%; height: 5%;
+  min-width: 200px; min-height: 50px;
+  margin: 3%;
+  font-family: 'Open Sans Condensed', sans-serif; font-size: 160%; letter-spacing: -.25px; color: white; font-weight: 100;
+  align-content: flex-start;
+  outline: 0;
+}
+
+#Google{
+  background-color: #F97575;
+}
+
+#StandAlone{
+  background-color: #3C8644;
+}
