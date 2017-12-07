@@ -1,17 +1,35 @@
+{% from "includes/_formHelpers.html" import render_field %}
+
 {% extends "layout.html" %}
 
-{% block body %
+{% block body %}
+
 <div class="RC1">
   <div class="LogInContainer">
     <h1 class="Heading">
       Welcome to <br>
       ImberPoolTest
     </h1>
-    <ul class="CreateAccountMethods">
-      <li><button type="button" class="MethodButton" id="Google">Sign up with Google</button></li>
-      <li><button type="button" class="MethodButton" id="StandAlone">Sign Up Independantly</button></li>
+
+    <ul class="InternalContainer">
+        <form id="LogIn" action="" method="POST">
+          <li><dir class="FormGroup" id="userName">{{form.UserName(placeholder="UserName")}}</dir></li>
+          {% if form.UserName.errors %}
+            <ul class="errors">{% for error in form.UserName.errors %}<li class="error">{{ error }}</li>{% endfor %}</ul>
+          {% endif %}
+          <div class="break"></div>
+
+          <li><dir class="FormGroup" id="Password">{{ form.Password(placeholder="Password")}}</dir></li>
+          {% if form.Password.errors %}
+            <ul class="errors">{% for error in form.Password.errors %}<li class="error">{{ error }}</li>{% endfor %}</ul>
+          {% endif %}
+          <div class="break"></div>
+
+          <p><button type="submit" id="SubmitButton" value="Submit">Log In</button></p>
+          <body onload="reset()"></body>
+        </form>
     </ul>
+
   </div>
 </div>
-
 {% endblock %}
