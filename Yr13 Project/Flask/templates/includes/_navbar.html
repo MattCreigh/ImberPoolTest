@@ -1,6 +1,10 @@
 <div class="NavContainer">
   <img src="#" alt="Logo" id="Logo">
   <div class="SignUpContainer">
-    <button type="button" id="SignUp">Sign Up</button>
+    {% if session.logged %}
+      <form action="/logout" method="post"><button type="submit" id="LogOut">Log Out</button></form>
+    {% else %}
+      <form action="/signup" method="post"><button type="submit" id="SignUp" >Sign Up</button></form>
+    {% endif %}
   </div>
 </div>

@@ -1,0 +1,13 @@
+
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
+dayShiftList : (1, 1, '08:00', '13:00')
