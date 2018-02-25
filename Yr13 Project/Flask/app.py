@@ -55,7 +55,7 @@ def logIn():
                     flash(" Incorrect username or password!!!")
                     return redirect(url_for("logIn"))
             except:
-                flash(" Incorrect usernamem or password!!!")
+                flash(" Incorrect username or password!!!")
                 return redirect(url_for("logIn",))
         return render_template("login.html", form=form)
 
