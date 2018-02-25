@@ -38,21 +38,24 @@ def logIn():
             session["logged"] == False
     except:
         form = LogInForm(request.form)
+
         if request.method == "POST" and form.validate():
             try:
                 cur = mysql.connection.cursor()
-                cur.execute("""SELECT * FROM trunk_user_index WHERE userName = "%s";""" %form.UserName.data)
-                if sha256_crypt.verify(form.Password.data, (cur.fetchone())[2]):
+                cur.execute("""SELECT * FROM trunk_user_index WHERE userName = "%s";""" %str(form.UserName.data))
+                userIndex = cur.fetchone()
+                cur.close()
+                log("password", (userIndex)[2])
+                if sha256_crypt.verify(form.Password.data, (userIndex[2])):
                     session["logged"] = True
                     session["username"] = form.UserName.data
                     session["userID"] = cur.fetchmany(0)
-                    cur.close()
                     return redirect(url_for("profile"))
                 else:
                     flash(" Incorrect username or password!!!")
                     return redirect(url_for("logIn"))
             except:
-                flash(" Incorrect username or password!!!")
+                flash(" Incorrect usernamem or password!!!")
                 return redirect(url_for("logIn",))
         return render_template("login.html", form=form)
 
@@ -187,6 +190,6 @@ def logOut():
 ### SERVER INIT ###########################################################################
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
 
 ### END OF CODE ############################################################################
