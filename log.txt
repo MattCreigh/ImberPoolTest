@@ -11,3 +11,5 @@ dayShiftList : (1, 1, '08:00', '13:00')
 dayShiftList : (1, 1, '08:00', '13:00')
 dayShiftList : (1, 1, '08:00', '13:00')
 dayShiftList : (1, 1, '08:00', '13:00')
+password : $5$rounds=535000$jCraC4z6DFxwBgGZ$fyOKj612S9XYnhsQYGwjTP00uu6XZW8s20QyUA21Eu2
+password : $5$rounds=535000$SMQ30riopJ5G57Zf$XdBxYJ.QApfz/ddnEY8KWt69z4WQO2HObpMJJ3pW6cB
