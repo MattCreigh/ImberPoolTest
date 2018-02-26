@@ -34,8 +34,6 @@ def login():
     try :
         if session["logged"] == True:
             return redirect(url_for("profile"))
-        else:
-            session["logged"] == False
     except:
         form = LogInForm(request.form)
 
