@@ -29,7 +29,7 @@ app.secret_key = "6d61374da4b4df53c6f8fbf4c9b05576d647a07da7498b400abaf7e1f4f441
 
 @app.route("/", methods=["GET","POST"])
 
-def logIn():
+def login():
 
     try :
         if session["logged"] == True:
@@ -53,10 +53,10 @@ def logIn():
                     return redirect(url_for("profile"))
                 else:
                     flash(" Incorrect username or password!!!")
-                    return redirect(url_for("logIn"))
+                    return redirect(url_for("login"))
             except:
-                flash(" Incorrect usernamem or password!!!")
-                return redirect(url_for("logIn",))
+                flash(" Incorrect username or password!!!")
+                return redirect(url_for("login",))
         return render_template("login.html", form=form)
 
 class LogInForm(Form):
@@ -121,7 +121,7 @@ def profile():
                                tableList = tableList)
 
     else:
-        return redirect(url_for("logIn"))
+        return redirect(url_for("login"))
 
 
 ### ADMIN PROFILE ROUTE ####################################################################
@@ -182,9 +182,9 @@ def adminProfile():
 def logOut():
     if "logged" in session:
         session.pop("logged")
-        return redirect(url_for("logIn"))
+        return redirect(url_for("login"))
     else:
-        return redirect(url_for("logIn"))
+        return redirect(url_for("login"))
 
 
 ### SERVER INIT ###########################################################################
