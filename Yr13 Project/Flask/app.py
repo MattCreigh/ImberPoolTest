@@ -59,10 +59,10 @@ def login():
 
 class LogInForm(Form):
     UserName = StringField(u"UserName", validators = [validators.input_required(message="You forgot to enter your Username!") ,
-    validators.Length(min = 4, max=20, message="Usernames are between 4 and 20 characters long")])
+    validators.Length(min = 4, max=20, message=" Usernames are between 4 and 20 characters long")])
 
     Password = PasswordField(u"Password", validators = [validators.input_required(message="You forgot to enter your password!"),
-    validators.Length(min=5, max=20, message="Usernames are between 4 and 20 characters long")])
+    validators.Length(min=5, max=20, message=" Passwords are between 4 and 20 characters long")])
 
 
 
